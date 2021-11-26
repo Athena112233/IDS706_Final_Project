@@ -1,1 +1,5 @@
-# IDS706_Final_Project: Airplane Ticket Price Prediction Tool
+# Airplane Ticket Price Prediction Tool
+## Introduction
+## Methods
+## Conclusion
+## How to run this repo?
