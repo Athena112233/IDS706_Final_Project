@@ -1,5 +1,18 @@
 # Airplane Ticket Price Prediction Tool
 ## Introduction
+This Airplane Ticket Price Prediction Tool aims to provide users with price predictions based on a pre-trained machine learning model through an interactive website.  
+The tool primarily consists of two parts:
+* **Machine learning model (Amazon SageMaker)**
+
+The data we used for building the model contains information for domestic flights in the United States from 2018. (Source: https://www.kaggle.com/zernach/2018-airplane-flights).
+
+Data is stored in the AWS S3 bucket. Feature engineering, model building, and model validation will be implemented on Amazon SageMaker as the main platform. 
+(add model later)
+* **Interactive website for the final deliverable (AWS S3 Website)**
+
+The website can be accessed at https://athena112233.github.io/airplane_ticket_price/.
+Users will interact with this website to utilize this tool to get multiple  ticket price predictions based on their custom inputs.  The website will allow users to input variables (e.g.  origin, destination) and return multiple predictions generated from the pre-trained ML model for users to compare and optimize their travel plan.
+ 
 ## Methods
 ### Data Cleaning Pipeline
 * Dropped Columns: 'Unnamed: 0', 'ItinID', 'MktID', 'MktCoupons', 'OriginWac', 'DestWac', 'ContiguousUSA'
