@@ -23,7 +23,7 @@ The website can be accessed at https://athena112233.github.io/airplane_ticket_pr
 Users will interact with this website to utilize this tool to get multiple  ticket price predictions based on their custom inputs.  The website will allow users to input variables (e.g.  origin, destination) and return multiple predictions generated from the pre-trained ML model for users to compare and optimize their travel plan.
  
 ## Methods
-![IDS706](https://user-images.githubusercontent.com/90014065/144720379-76542660-ab57-4f13-bfc3-8f3af16d6cb4.png)
+![IDS7061](https://user-images.githubusercontent.com/90014065/144720495-b60e9359-225b-4149-8365-f9d40549d3ec.png)
 ### Data Cleaning Pipeline
 * Dropped Columns: 'Unnamed: 0', 'ItinID', 'MktID', 'MktCoupons', 'OriginWac', 'DestWac', 'ContiguousUSA', 'Miles'
 ### Model Building
