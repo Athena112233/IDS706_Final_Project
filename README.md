@@ -25,8 +25,10 @@ Users will interact with this website to utilize this tool to get multiple  tick
 ## Methods
 ![IDS7061](https://user-images.githubusercontent.com/90014065/144720495-b60e9359-225b-4149-8365-f9d40549d3ec.png)
 ### Data Cleaning Pipeline
-* Dropped Columns: 'Unnamed: 0', 'ItinID', 'MktID', 'MktCoupons', 'OriginWac', 'DestWac', 'ContiguousUSA', 'Miles'
+* Dropped Columns: <I>'Unnamed: 0', 'ItinID', 'MktID', 'MktCoupons', 'OriginWac', 'DestWac', 'ContiguousUSA', 'Miles'</I>
 ### Model Building
+* Response Variable: <I>PricePerTicket</I>
+* Predictors: <I>Quarter, Origin, Dest, AirlineCompany, NumTicketsOrdered</I>
 ### Model Validation
 ### Model Deployment
 ## Conclusion
