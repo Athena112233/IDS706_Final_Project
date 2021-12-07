@@ -1,11 +1,10 @@
 # Airplane Ticket Price Prediction Tool
 ## Remaining Tasks
-1. Deploy model (Tianyun)
-2. Connect lambda to model endpoint and output solution (Athena)
-3. Build website using APP Runner or S3 (Ying)
-4. Send solution back to user via lambda or API gateway (Minjung)
-5. Readme writing 
-6. Demo
+1. Connect lambda to model endpoint and output solution (Athena)
+2. Build website using APP Runner or S3 (Ying)
+3. Send solution back to user via lambda or API gateway (Minjung)
+4. Readme writing 
+5. Demo
 
 ## Introduction
 This Airplane Ticket Price Prediction Tool aims to provide users with price predictions based on a pre-trained machine learning model through an interactive website.  
