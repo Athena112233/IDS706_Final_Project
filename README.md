@@ -1,4 +1,6 @@
 # Airplane Ticket Price Prediction Tool
+Please visit our product website: https://athena112233.github.io/airplane_ticket_price/
+
 ## Remaining Tasks
 1. Connect lambda to model endpoint and output solution (Athena)
 2. Build website using APP Runner or S3 (Ying)
