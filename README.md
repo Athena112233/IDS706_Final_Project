@@ -26,8 +26,11 @@ Users will interact with this website to utilize this tool to get multiple  tick
 ![IDS7061](https://user-images.githubusercontent.com/90014065/144720495-b60e9359-225b-4149-8365-f9d40549d3ec.png)
 ### Data Cleaning Pipeline
 Our data cleaning pipeline consist of two components: remove unnecesscary data and transforming the data.
-1. Remove Unnecessary Data: dropped irrelevant data fields from the dataset which include 'Unnamed: 0', 'ItinID', 'MktID', 'MktCoupons', 'OriginWac', 'DestWac', 'ContiguousUSA', 'Miles'.
-Since many data fields in our data are categorical, we need to transfrom the dataset piror to feeding it into the machine learning algorithm.
+1. Remove Unnecessary Data: 
+   dropped irrelevant data fields from the dataset which include 'Unnamed: 0', 'ItinID', 'MktID', 'MktCoupons', 'OriginWac', 'DestWac', 'ContiguousUSA', 'Miles'.
+2. Transform data into sklearn readable format:
+   * Categorical: Quarter, Airline Company, Origin, Destination
+   * Numerical: Number Tickets Ordered 
 
 ### Model Building
 * Response Variable: <I>PricePerTicket</I>
