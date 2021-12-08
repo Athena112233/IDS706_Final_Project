@@ -1,3 +1,9 @@
 pandas
+numpy
 scikit-learn
-dask
+
+pylint
+pytest
+click
+black
+pytest-cov
