@@ -44,6 +44,12 @@ The evaluation metric of
 ### Model Deployment
 ## Conclusion
 ## How to run this repo?
+## User guide
+Users can go to our website https://athena112233.github.io/airplane_ticket_price/ and find the 'Product' tab.
+There users can see a link to our FastAPI document site.
+Users can input information about their trip in a style of quarter, origin, destination, number of ticket, airline.(e.g. 1, LAX, JFK, 1, DL).
+Users can click the 'Predict'.
+The predicted price with users' input will be presented.
 ### How to run on SageMaker (for team members only)
 * Follow this tutorial to set up a SageMaker Instance https://aws.amazon.com/getting-started/hands-on/build-train-deploy-machine-learning-model-sagemaker/
 * After instance is ready, click on Jupyter Lab
