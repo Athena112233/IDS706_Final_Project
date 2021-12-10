@@ -10,3 +10,5 @@ pytest
 click
 black
 pytest-cov
+fastapi
+uvicorn

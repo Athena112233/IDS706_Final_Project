@@ -12,17 +12,6 @@ app = FastAPI()
 
 warnings.filterwarnings("ignore")
 
-s3 = boto3.client("s3")
-
-bucket = "airplane-ticket-model"
-key1 = "preprocessor.sav"
-key2 = "lr_model.sav"
-
-my_pickle = s3.get_object(Bucket=bucket, Key=key1)
-preprocessor = pickle.loads(my_pickle["Body"].read())
-my_pickle2 = s3.get_object(Bucket=bucket, Key=key2)
-model = pickle.loads(my_pickle2["Body"].read())
-
 
 @app.get("/")
 async def root():
@@ -33,6 +22,16 @@ async def root():
 
 @app.get("/PricePredict/{plan}")
 async def predict(plan: str):
+    
+    s3 = boto3.client("s3")
+    bucket = "airplane-ticket-model"
+    key1 = "preprocessor.sav"
+    key2 = "lr_model.sav"
+    
+    my_pickle = s3.get_object(Bucket=bucket, Key=key1)
+    preprocessor = pickle.loads(my_pickle["Body"].read())
+    my_pickle2 = s3.get_object(Bucket=bucket, Key=key2)
+    model = pickle.loads(my_pickle2["Body"].read())
 
     # input = {"data": plan}
     types = {
@@ -49,8 +48,8 @@ async def predict(plan: str):
     df.to_numpy()
 
     transformed_data = preprocessor.transform(df)
-    predict = model.predict(transformed_data)
-
+    predict = "$" + str(round(model.predict(transformed_data)[0][0], 2))
+    
     return {"Your predicted price will be:": predict}
 
 
