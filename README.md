@@ -23,7 +23,7 @@ The website can be accessed at https://athena112233.github.io/airplane_ticket_pr
 Users will interact with this website to utilize this tool to get multiple  ticket price predictions based on their custom inputs.  The website will allow users to input variables (e.g.  origin, destination) and return multiple predictions generated from the pre-trained ML model for users to compare and optimize their travel plan.
  
 ## Methods
-![IDS7061](https://user-images.githubusercontent.com/90014065/144720495-b60e9359-225b-4149-8365-f9d40549d3ec.png)
+![IDS7062](https://user-images.githubusercontent.com/90014065/145660927-8133682b-68d0-43a1-b622-9f3682921bb6.png)
 
 ### Data Cleaning Pipeline
 Our data cleaning pipeline consist of two components: remove unnecesscary data and transforming the data.
