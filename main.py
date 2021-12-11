@@ -5,19 +5,26 @@ import sklearn
 import sagemaker
 import pickle
 import warnings
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.templating import Jinja2Templates
 import uvicorn
 
 app = FastAPI()
 
 warnings.filterwarnings("ignore")
 
+templates = Jinja2Templates(directory = "templates")
 
 @app.get("/")
-async def root():
-    return {
-        "message": "Please enter your travel plan in the following format: Quarter,Origin,Destination,Number of ticket,Airline. For example: 1,BOS,LAX,2,AA"
-    }
+async def dashboard(request: Request):
+    #return {
+    #    "message": "Please enter your travel plan in the following format: Quarter,Origin,Destination,Number of ticket,Airline. For example: 1,BOS,LAX,2,AA"
+    #}
+    return templates.TemplateResponse("dashboard.html", {
+        "request": request,
+        "somevar": 2
+    })
+    
 
 
 @app.get("/PricePredict/{plan}")
@@ -41,6 +48,7 @@ async def predict(plan: str):
         "NumTicketsOrdered": np.float64,
         "AirlineCompany": str,
     }
+    
     data = plan.split(",")
     df = pd.DataFrame(data).transpose()
     df.columns = list(types.keys())

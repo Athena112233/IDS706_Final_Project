@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title> Tool  </title>
+        <style>
+            html, body{
+                margin:0;
+                padding:0;
+                font-family:'Courier New', Courier, monospace;
+            }
+            
+            .content{
+                width:80%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 3%;
+            }
+            
+            .content p{
+              font-size: 15pt;
+            }
+            
+            .content li{
+              font-size: 15pt;
+            }
+                                    
+            .topbar {
+                background-color: rgb(24, 52, 71);;
+                overflow: hidden;
+                text-align: center;
+              }
+              
+            nav p{
+              font-size: 13pt;
+              color: rgba(255, 255, 255, 0.7);
+            }
+                
+            h1{
+                color: rgb(24, 52, 71);
+            }
+            
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+         <nav class = "topbar">
+            <p> <i><b> Airplane Ticket Price Prediction Tool Product Sample Page </b></i></p> 
+        </nav>
+        <div class = "content">
+            <h1> Airplane Ticket Price Perdiction Tool </h1>
+            <p>
+                <b> Required Inputs: </b>
+                <ul>
+                    <li> Quarter: 1, 2, 3, or 4 </li>
+                    <li> Origin: origin airport abbreivation such as BOS for Boston Logan International Airprt </li>
+                    <li> Dest: destination airport abbreivation such as LAX for Los Angeles International Airportt  </li>
+                    <li> Number of Tickets: number of tickets per order </li>
+                    <li> Airline Company: airline company abbreivation such as AA for American Airline </li>
+                </ul>
+            </p>
+            <p> Sample Input: Quarter,Origin,Dest,NumberOfTickets,AirlineCompany <b>1,BOS,LAX,2,AA</b></p>
+            
+            <p>
+                <b> Product Page: </b>
+            </p>
+            <ol>
+                <li> Scroll down to <b> GET /PricePredict/{plan} </b> and expand the tab. </li>
+                <li> Click on the <b> Try it out </b> button at the upper right hand corner. </li>
+                <li> In the Parameters section, click on the text box, and enter your trip information. Sample input: 1,BOS,LAX,2,AA</li>
+                <li> Scroll down to the Code Section, and see the Response Body, you will see your Price Per Ticket prediction. </li>
+            </ol>
+            <iframe src="http://3.235.141.11:8080/docs" title="api"></iframe>
+            
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
