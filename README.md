@@ -9,11 +9,11 @@ The tool primarily consists of two parts:
 The data we used for building the model contains information for domestic flights in the United States from 2018. (Source: https://www.kaggle.com/zernach/2018-airplane-flights).
 
 Data is stored in the AWS S3 bucket. Feature engineering, model building, and model validation will be implemented on Amazon SageMaker as the main platform. 
-(add model later)
+
 * **Interactive website for the final deliverable (AWS S3 Website)**
 
 The website can be accessed at https://athena112233.github.io/airplane_ticket_price/.
-Users will interact with this website to utilize this tool to get multiple  ticket price predictions based on their custom inputs.  The website will allow users to input variables (e.g.  origin, destination) and return multiple predictions generated from the pre-trained ML model for users to compare and optimize their travel plan.
+Users will interact with this website to utilize this tool to get multiple ticket price predictions based on their custom inputs.  The website will allow users to input variables (e.g.  origin, destination) and return corresponding predictions generated from the pre-trained ML model for users to compare and optimize their travel plan.
  
 ## Methods
 ![IDS7062](https://user-images.githubusercontent.com/90014065/145660927-8133682b-68d0-43a1-b622-9f3682921bb6.png)
