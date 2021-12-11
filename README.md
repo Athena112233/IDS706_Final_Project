@@ -39,10 +39,9 @@ The above steps finalized our input data into Ont-Hot-Encoded Quarter, Airline C
 The model was built and deployed through Amazon SageMaker. Source codes for trianing the model are located in the model subfolder. We tested three ML algorithms -- Linear Regression, Support Vector Machine Regressor, and Random Forest Regressor. Out of the three, the Linear Regression Model has the best runtime and the best accuracy. Thus, our finalized model deployed to production is a Linear Regression model with PricePerTicket as the repsonse variable, and the transformed Origin, Destiantion, Airline Company, and Number Tickets Ordered as the response variables. 
 
 ### Model Validation
-The evaluation metric of 
+In order to assess the performance of the model, we used sklearn evaluation metrics. Mean squared error (MSE) takes the mean squared difference between the target and predicted values. This value is widely used for many regression problems and larger errors have correspondingly larger squared contributions to the mean error. 
 
 ### Model Deployment
-## Conclusion
 ## How to run this repo?
 ## User guide
 Users can go to our website https://athena112233.github.io/airplane_ticket_price/ and find the 'Product' tab.
@@ -50,12 +49,3 @@ There users can see a link to our FastAPI document site.
 Users can input information about their trip in a style of quarter, origin, destination, number of ticket, airline.(e.g. 1, LAX, JFK, 1, DL).
 Users can click the 'Predict'.
 The predicted price with users' input will be presented.
-### How to run on SageMaker (for team members only)
-* Follow this tutorial to set up a SageMaker Instance https://aws.amazon.com/getting-started/hands-on/build-train-deploy-machine-learning-model-sagemaker/
-* After instance is ready, click on Jupyter Lab
-* upload the file models/modeling.ipynb to Jupyter Lab
-* In the 4th cell, modify bucket and file name to the S3 bucket that stores your dataset
-* Run the file and do the following:
-  * Set up feature tranformation pipeline
-  * Set up model pipeline
-  * Test model 
