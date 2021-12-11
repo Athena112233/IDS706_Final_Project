@@ -35,7 +35,8 @@ The model was built and deployed through Amazon SageMaker. Source codes for tria
 In order to assess the performance of the model, we used sklearn evaluation metrics. Mean squared error (MSE) takes the mean squared difference between the target and predicted values. This value is widely used for many regression problems and larger errors have correspondingly larger squared contributions to the mean error. 
 
 ### Model Deployment
-## How to run this repo?
+Amazon SageMaker allows us to deploy the model to an endpoint. The endpoint stores a trained model, in which it can be accessed and used throught AWS. This model is the main component of our project.
+
 ## User guide
 Users can go to our website https://athena112233.github.io/airplane_ticket_price/ and find the 'Product' tab.
 There users can see a link to our FastAPI document site.
